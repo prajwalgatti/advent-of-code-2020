@@ -22,15 +22,40 @@ def pair_sum(arr, sum_val):
 
 
 # Number which does not follow the rule
-required_num = None
+invalid_number = None
+invalid_number_idx = None
 
 for idx in range(N_PREAMBLE, len(data)):
     if not pair_sum(data[idx - N_PREAMBLE: idx], data[idx]):
-        required_num = data[idx]
+        invalid_number = data[idx]
+        invalid_number_idx = idx
         break
 
 print("Part 1")
-if required_num:
-    print("The first number to not follow the rule: {}\n".format(required_num))
+if invalid_number:
+    print("The first number to not follow the rule: {}\n".format(invalid_number))
 else:
     print("Required number not found.")
+
+# Part 2
+
+# required contiguous set of numbers
+contiguous_set = None
+
+for num_data in (data[:invalid_number_idx], data[invalid_number_idx + 1:]):
+    for idx_i in range(len(num_data) - 1):
+        sum_val = num_data[idx_i]
+        idx_j = idx_i + 1
+        while (not sum_val >= invalid_number) and (idx_j < len(num_data)):
+            sum_val += num_data[idx_j]
+            idx_j += 1
+        if sum_val == invalid_number:
+            contiguous_set = num_data[idx_i: idx_j]
+            break
+
+print("Part 2")
+if contiguous_set:
+    print("Required contiguous set of numbers found")
+    print("Answer: {}".format(min(contiguous_set) + max(contiguous_set)))
+else:
+    print("Required contiguous set of numbers not found.")
