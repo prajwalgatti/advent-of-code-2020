@@ -1,6 +1,6 @@
 # Day 5
 
-with open("input.txt", 'r') as f:
+with open("./input/input_5.txt", 'r') as f:
     data = f.read().splitlines()
 
 # Part 1

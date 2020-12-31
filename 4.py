@@ -2,7 +2,7 @@
 
 # Part 1
 
-with open("input.txt", 'r') as f:
+with open("./input/input_4.txt", 'r') as f:
     # format data into list of dictionaries
     # where each dictionary is a passport
     data = [dict(entry.split(":") for entry in data.split())

@@ -1,6 +1,6 @@
 # day 3
 
-with open("input.txt", 'r') as f:
+with open("./input/input_3.txt", 'r') as f:
     data = f.read().splitlines()
 
 pattern_length = len(data)

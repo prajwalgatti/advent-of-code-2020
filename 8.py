@@ -1,6 +1,6 @@
 # Data
 
-with open("input.txt", 'r') as f:
+with open("./input/input_8.txt", 'r') as f:
     data = f.read().splitlines()
 
 # format the data into a list which contains

@@ -9,7 +9,7 @@
 #    r = requests.get(url, allow_redirects=True)
 #    open('input.txt', 'wb').write(r.content)
 
-with open("input.txt", 'r') as f:
+with open("./input/input_1.txt", 'r') as f:
     data = [int(num) for num in f.read().splitlines()]
 
 # Part 1

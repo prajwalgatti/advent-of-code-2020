@@ -2,7 +2,7 @@
 
 import re
 
-with open("input.txt", 'r') as f:
+with open("./input/input_2.txt", 'r') as f:
     data = f.read().splitlines()
 
 pat = re.compile(r'(\d+)-(\d+)\s(\w):\s(\w+)')

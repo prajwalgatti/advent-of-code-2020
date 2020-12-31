@@ -2,7 +2,7 @@
 
 # Part 1
 
-with open("input.txt", 'r') as f:
+with open("./input/input_6.txt", 'r') as f:
     data = [group.split('\n') for group in f.read().split('\n\n')]
 
 for group in data:

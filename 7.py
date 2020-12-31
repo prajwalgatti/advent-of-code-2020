@@ -2,7 +2,7 @@
 
 import re
 
-with open("input.txt", 'r') as f:
+with open("./input/input_7.txt", 'r') as f:
     data = f.read().splitlines()
 
 # Format the rules, create a dictionary structure
